@@ -47,7 +47,7 @@ public class saveGif extends HttpServlet {
             userID = req.getRemoteAddr();
             try {
                 Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/sample",prop);              
-
+                
 		Statement stmt = conn.createStatement();
                     stmt.executeUpdate("INSERT INTO images (userID, url) values ('" + userID + "'," + "'" + url +"')");         
                 System.out.println("save successful.");
