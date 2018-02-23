@@ -49,7 +49,7 @@ public class saveGif extends HttpServlet {
                 Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/sample",prop);              
 
 		Statement stmt = conn.createStatement();
-                stmt.executeUpdate("INSERT INTO images (userID, url) values ('" + userID + "'," + "'" + url +"')");         
+                    stmt.executeUpdate("INSERT INTO images (userID, url) values ('" + userID + "'," + "'" + url +"')");         
                 System.out.println("save successful.");
             } catch (SQLException ex) {
                 Logger.getLogger(retrieveGif.class.getName()).log(Level.SEVERE, null, ex);
